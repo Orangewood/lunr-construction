@@ -7,12 +7,19 @@ import ClockOutHeader from './kiosk/components/clockout/ClockOutHeader'
 import ClockOutBody from './kiosk/components/clockout/ClockOutBody'
 import CustomButton from './common/components/CustomButton'
 import ClockOut from './kiosk/components/clockout/ClockOut'
+import InformationContainer from './common/components/InformationContainer'
+import BackgroundContainer from './common/components/BackgroundContainer'
+import { Container } from 'react-bootstrap';
 
 
 function App() {
   return (
     <>
-    <ClockOut />
+    <BackgroundContainer nested/> 
+      <InformationContainer />
+         <CustomButton text={"Welcome"}/>
+       <InformationContainer/>
+    <BackgroundContainer/>
     </>
   );
 }

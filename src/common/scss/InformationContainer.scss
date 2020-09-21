@@ -1,5 +1,9 @@
-.information-container{
-    border-radius: 25px;
-    background-color: red
-
-}
+    .information-container{
+        position: absolute;
+        border-radius: 100px;
+        background: #fff;
+        width: 90%;
+        height: 60vh;
+        transform: translate(-10%, 50%);
+        box-shadow: 5px 10px 8px 10px #888888
+    }

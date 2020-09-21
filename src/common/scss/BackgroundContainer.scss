@@ -1,0 +1,25 @@
+
+.solid-grey-background{
+    position: absolute;
+    background: #D7D0C8;
+    width: 100%;
+    height: 100vh;
+}
+
+
+.split-background{
+    position: absolute;
+    background-image: linear-gradient(#000000 50%, #D7D0C8 50%);
+    width: 100%;
+    height: 100vh;
+}
+
+.nested-background{
+    position: absolute;
+    border-radius: 25px;
+    background: #D7D0C8;
+    width: 100%;
+    height: 90.9vh;
+    transform: translate(-10%, 10%);
+}
+
