@@ -19,7 +19,7 @@ export default function BackgroundContainer(
 
   return (
     <>
-      <div className={BackGroundSelection()}>{props.children} </div>
+      <div className={BackGroundSelection()}> {props.children} </div>
     </>
   );
 }

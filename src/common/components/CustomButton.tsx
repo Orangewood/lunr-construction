@@ -14,15 +14,15 @@ export type ButtonClass = {
 
 interface CustomButtonProps {
   text: string;
-  type: ButtonClass;
+  type?: ButtonClass;
 }
 
 export default function CustomButton(props: CustomButtonProps): JSX.Element {
   return (
     <>
-      <Button className='btn-hello'>
+      <Button>
         {props.text}
-        {/* <img src={OrangeButton}></img> */}
+        {/* <img src={}></img> */}
       </Button>
     </>
   );

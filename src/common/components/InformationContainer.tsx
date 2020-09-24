@@ -9,7 +9,9 @@ interface ClockOutPageProps {
 export default function ClockOutPage(props: ClockOutPageProps) {
   return (
     <>
-      <div className='information-container'>{props.children}</div>
+      <div className='information-container'>
+        {props.children}
+      </div>
     </>
   );
 }
