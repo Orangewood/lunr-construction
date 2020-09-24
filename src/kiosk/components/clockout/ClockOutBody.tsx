@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
+import "../../scss/ClockOutBody.scss"
 var dateFormat = require("dateformat");
+
 
 interface ClockOutBodyProps {
   selectedUser: any; // Change to class from the api call
@@ -11,30 +13,29 @@ export default function ClockOutHeader(props: ClockOutBodyProps): JSX.Element {
   const [time, setTime] = useState<Date>(now);
 
   useEffect(() => {
-    let timer = setInterval(() => {
+   setInterval(() => {
       setTime(now);
     }, 1000);
-
-    return () => clearInterval(timer);
   }, []);
 
+
   return (
-    <Container fluid>
+    <div className="test-container">
       <Row>
-        <Col md={2}>
-          <h2>Clock Out</h2>
+        <Col>
+          {/* <h2>Clock Out</h2> */}
+          Clock Out
           {/* User address, time, date */}
           {props.selectedUser}
           {/* Medium time or short time? */}
-          <Col>{dateFormat(time, "shortTime")}</Col> <Col>{"Test"}</Col>
+         {dateFormat(time, "shortTime")}
         </Col>
-        <Col md={2}>
+        <Col>
           {/* Users Picture here, title under */}
           {props.selectedUser}
           {time.getSeconds()}
-          <Col>{"test"}</Col>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }

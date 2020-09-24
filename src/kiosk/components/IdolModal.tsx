@@ -20,7 +20,7 @@ export default function IdolModal(props: IdolModalProps): JSX.Element {
 
   return (
     <>
-      <Modal size={"lg"} show={show}>
+      <Modal size={"lg"} show={true}>
         <Modal.Header closeButton>Are you still there?</Modal.Header>
         <Row>
           <Col>
