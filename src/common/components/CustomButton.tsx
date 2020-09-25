@@ -1,9 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
-import OrangeButton from "../images/OrangeButton.svg";
-import BlueButton from "../images/BlueButton.svg";
-import GreenButton from "../images/GreenButton.svg";
-
 import "../scss/Button.scss";
 
 
