@@ -7,23 +7,26 @@ import GreenButton from "../images/GreenButton.svg";
 import "../scss/Button.scss";
 
 export type ButtonClass = {
-  orange: "orangeBody";
-  blue: "backToHomeButton";
-  green: "greenBody";
+  orange: boolean;
+  blue: boolean;
+  green: boolean;
 };
 
 interface CustomButtonProps {
   text: string;
-  type?: ButtonClass;
+  color?: ButtonClass;
+  onClickedButton: (clicked: boolean) => void;
 }
 
 export default function CustomButton(props: CustomButtonProps): JSX.Element {
+  const {text, color, onClickedButton} = props;
   return (
     <>
-      <Button>
-        {props.text}
-        {/* <img src={}></img> */}
-      </Button>
+    <button className="custom-button">
+      <div className="button-text">Sign In</div>
+    {/* <img src={GreenButton} onClick={() => onClickedButton(true)} /> */}
+    </button>
+
     </>
   );
 }
