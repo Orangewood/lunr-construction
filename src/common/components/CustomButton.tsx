@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../scss/Button.scss";
 
-
-
 export type ButtonClass = {
   orange: string;
   blue: string;
@@ -10,28 +8,28 @@ export type ButtonClass = {
 };
 
 export const ButtonColors: ButtonClass = {
-    orange: "orange",
-    blue: "blue",
-    green: "green",
+  orange: "orange",
+  blue: "blue",
+  green: "green",
 };
 
 interface CustomButtonProps {
   text: string;
   color?: string;
+  id?: string;
   onClickedButton: (clicked: boolean) => void;
 }
 
-
 export default function CustomButton(props: CustomButtonProps): JSX.Element {
-  const { text, color, onClickedButton } = props;
+  const { text, color, onClickedButton, id } = props;
   return (
     <>
       <button
         className={`custom-button-${color}`}
-        onClick={() => console.log("hi")}
+        id={`${id}`}
+        onClick={() => onClickedButton(true)}
       >
         <div className='button-text'>{text}</div>
-        {/* <img src={GreenButton} onClick={() => onClickedButton(true)} /> */}
       </button>
     </>
   );

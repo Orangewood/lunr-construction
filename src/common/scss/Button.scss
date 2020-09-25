@@ -1,19 +1,40 @@
-.orangeBody {
-    background-image: linear-gradient(rgb(226, 88, 251), rgb(142, 30, 3), rgb(58, 10, 0))
+.custom-button,
+.custom-button-blue,
+.custom-button-green,
+.custom-button-orange {
+  width: 264px;
+  height: 64px;
+  border: none;
+  color: transparent;
+  outline: none;
+  box-shadow: none;
+  position: absolute;
+  cursor:pointer;
+
+  &-blue {
+    background: url(../images/BlueButton.svg);
+  }
+  &-green {
+    background: url(../images/GreenButton.svg);
+  }
+  &-orange {
+    background: url(../images/OrangeButton.svg);
+  }
+  .button-text {
+    color: white;
+    width: auto;
+    height: auto;
+    font-family: "Source Serif Pro", serif;
+    position: absolute;
+    font-size: x-large;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
-// .backToHomeButton {
-//     background-image: linear-gradient(rgb(40, 85, 140), rgb(12, 38, 68), rgb(0, 0, 0))
-// }
 
-// .greenBody{
-//     background-image: linear-gradient(rgb(124, 120, 35), rgb(91, 87, 4), rgb(33, 32, 15)) 
-// } */
-
-
-.btn{
-    background-image: url(../images/OrangeButton.svg);
-    height: 64px;
-    width: 264px;
-
+custom-button:focus {
+  .button-text {
+    opacity: 25%;
+  }
 }
-

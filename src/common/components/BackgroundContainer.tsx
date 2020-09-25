@@ -6,15 +6,17 @@ interface BackGroundContainerProps {
   solid?: boolean;
   split?: boolean;
   nested?: boolean;
+  inverted?: boolean;
 }
 export default function BackgroundContainer(
   props: BackGroundContainerProps
 ): JSX.Element {
-  const { solid, split, nested } = props;
+  const { solid, split, nested, inverted } = props;
   const BackGroundSelection = () => {
     if (solid) return "solid-grey-background";
     if (split) return "split-background";
-    if (nested) return "nested-background";
+    if (nested) return "nested";
+    if (inverted) return "nested-inverted";
   };
 
   return (

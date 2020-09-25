@@ -1,12 +1,11 @@
-import React, { Children, ReactNode, useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import React, { ReactNode } from "react";
 import "../scss/InformationContainer.scss";
 
-interface ClockOutPageProps {
+interface InformationContainerProps {
   [x: string]: ReactNode;
 }
 
-export default function ClockOutPage(props: ClockOutPageProps) {
+export default function InformationContainer(props: InformationContainerProps) {
   return (
     <>
       <div className='information-container'>
