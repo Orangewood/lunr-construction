@@ -17,7 +17,7 @@ interface CustomButtonProps {
   text: string;
   color?: string;
   id?: string;
-  onClickedButton: (clicked: boolean) => void;
+  onClickedButton: (clicked: any) => void;
 }
 
 export default function CustomButton(props: CustomButtonProps): JSX.Element {
