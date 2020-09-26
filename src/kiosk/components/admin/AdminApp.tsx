@@ -3,7 +3,7 @@ import { Button, Col, ListGroup, Row } from "react-bootstrap";
 import "../../scss/Admin.scss";
 import AdminOptionsList from "./AdminOptionList";
 import ClientSelect from "./ClientSelect";
-import Foreman from "./Foreman";
+import Foreman from "./ForemanScreen";
 
 export enum AppList {
   home = 0,

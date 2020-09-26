@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, ListGroup, Row } from "react-bootstrap";
+import { Col, Container, ListGroup, Row } from "react-bootstrap";
 import BackgroundContainer from "../../../common/components/BackgroundContainer";
 import InformationContainer from "../../../common/components/InformationContainer";
 import { AppList } from "./AdminApp";
@@ -13,8 +13,8 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
     <>
       <BackgroundContainer solid />
       <InformationContainer>
-        <div className='admin-menu-body'>
-          <ListGroup>
+        <Container className='admin-menu-body'>
+          <ListGroup style={{border: 'none'}}>
             <ListGroup.Item>
               <Row>
                 <Col xs={10} sm={10}>
@@ -96,7 +96,7 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
               </Row>
             </ListGroup.Item>
           </ListGroup>
-        </div>
+        </Container>
       </InformationContainer>
     </>
   );
