@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Container } from "react-bootstrap";
 import "../scss/BackgroundContainer.scss";
 
 interface BackGroundContainerProps {
@@ -21,7 +22,7 @@ export default function BackgroundContainer(
 
   return (
     <>
-      <div className={BackGroundSelection()}> {props.children} </div>
+      <Container fluid className={BackGroundSelection()}> {props.children} </Container>
     </>
   );
 }
