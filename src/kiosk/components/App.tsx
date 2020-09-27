@@ -13,16 +13,19 @@ import InformationContainer from "../../common/components/InformationContainer";
 import BackgroundContainer from "../../common/components/BackgroundContainer";
 import { Container, Row } from "react-bootstrap";
 import ButtonClass from "../../common/components/CustomButton";
-import StartScreen from "../../common/components/StartScreen";
+// import StartScreen from "../../common/components/StartScreen";
 import AuthenticatedRoute from "../routes/AuthenticatedRouting";
 import AdminPage from "./admin/AdminApp";
 import AdminMenu from "./admin/AdminMenu";
+import ModalTest from "./clockout/ModalTest";
 
 export default function App() {
   return (
     <>
       {/* <AdminMenu /> */}
-      <ClockOut />
+      {/* <ClockOut /> */}
+      {/* <IdolModal signOut={() => console.log('test')}/> */}
+      <ModalTest />
     </>
   );
 }
