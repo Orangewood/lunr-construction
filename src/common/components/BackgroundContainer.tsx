@@ -24,7 +24,7 @@ export default function BackgroundContainer(
 
   return (
     <>
-      <Container fluid className={BackGroundSelection()}> {props.children} </Container>
+      <div  className={BackGroundSelection()}> {props.children} </div>
     </>
   );
 }

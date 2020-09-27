@@ -6,6 +6,7 @@
         width: 100vw;
         height: 100vh;
         z-index: -1;
+        overflow: hidden;
     }
     .split-background{
         position: absolute;
@@ -13,6 +14,7 @@
         width: 100vw;
         height: 100vh;
         z-index: -1;
+        overflow: hidden;
     }
     
     .nested, .nested-inverted{
@@ -22,12 +24,14 @@
         width: 95vw;
         height: 100vh;
         z-index: -1;
+        overflow: hidden;
         &-inverted {
             transform: scale(-1, 1);
-            width:100vw;
-            height: 100vh;
-            left:10%;
-            margin-top:7%;
+            height: 90vh;
+            width: 90vw;
+            right: 0;
+            top: 5%;
+            overflow: hidden;
         }
     }
     .kiosk-start {
@@ -38,7 +42,7 @@
         background-repeat: no-repeat;
         height: 100vh;
         z-index: -1;
-
+        overflow: hidden;
     }
   }
 

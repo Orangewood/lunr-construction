@@ -1,6 +1,6 @@
 import React from "react";
 import QuickBooks from "../../images/Quickbooks.svg";
-import "../../scss/Admin.scss";
+import "../../scss/admin/Admin.scss";
 
 interface AuthorizeScreenProps {
   onLoginButtonClick: (clicked: boolean) => void;

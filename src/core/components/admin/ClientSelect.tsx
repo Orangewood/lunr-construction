@@ -5,9 +5,9 @@ import CustomButton, {
   ButtonColors,
 } from "../../../common/components/CustomButton";
 import InformationContainer from "../../../common/components/InformationContainer";
-import "../../scss/Admin.scss";
 import { AppList } from "./AdminApp";
 import ClientSearch from "./ClientSearch"
+import "../../scss/admin/Admin.scss";
 
 interface ClientSelectProps {
   apiInformation?: any; //Api class to be sent here

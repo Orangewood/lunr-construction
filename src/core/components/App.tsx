@@ -17,15 +17,15 @@ import ButtonClass from "../../common/components/CustomButton";
 import AuthenticatedRoute from "../routes/AuthenticatedRouting";
 import AdminPage from "./admin/AdminApp";
 import AdminMenu from "./admin/AdminMenu";
-import ModalTest from "./clockout/ModalTest";
+import ModalTest from "./kiosk/ModalTest";
 
 export default function App() {
   return (
     <>
-      {/* <AdminMenu /> */}
+      <AdminMenu />
       {/* <ClockOut /> */}
       {/* <IdolModal signOut={() => console.log('test')}/> */}
-      <ModalTest />
+      {/* <ModalTest /> */}
     </>
   );
 }
