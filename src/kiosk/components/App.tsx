@@ -21,8 +21,8 @@ import AdminMenu from "./admin/AdminMenu";
 export default function App() {
   return (
     <>
-      <AdminMenu />
-      {/* <ClockOut /> */}
+      {/* <AdminMenu /> */}
+      <ClockOut />
     </>
   );
 }

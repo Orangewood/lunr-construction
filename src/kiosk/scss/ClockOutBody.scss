@@ -1,4 +1,6 @@
-.test-container {
+#start-screen-body {
     position: absolute;
-    bottom: 50%;
+    transform: scale(-1, 1);
+    text-align: left;
+    font-family: "Source Serif Pro", serif;
 }

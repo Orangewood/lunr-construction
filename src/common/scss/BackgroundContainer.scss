@@ -30,6 +30,16 @@
             margin-top:7%;
         }
     }
+    .kiosk-start {
+        position: absolute;
+        background-image: url(../../kiosk/images/Building.jpg);
+        // background-size: 100% 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+        z-index: -1;
+
+    }
   }
 
 

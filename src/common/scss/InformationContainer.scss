@@ -1,4 +1,4 @@
-    .information-container{
+    .information-container, .information-container-black{
         position: absolute;
         border-radius: 0px 100px 100px 0px;
         background: #fff;
@@ -7,4 +7,17 @@
         box-shadow: 5px 10px 8px 10px #888888;
         z-index: -1;
         top:10%;
+        &-black{
+            position: absolute;
+            background: #000000;
+            color: #fff;
+            transform: scale(-1, 1);
+            width: 70vw;
+            height: 70vh;
+            right: 0;
+            top:15%;
+            overflow: hidden;
+            box-shadow: none;
+        }
     }
+
