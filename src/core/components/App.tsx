@@ -3,12 +3,12 @@ import { Switch, Router, Route } from "react-router-dom";
 // import "./App.css";
 import Test from "./admin/AdminMenu";
 import IdolModal from "./IdolModal";
-import ClockOutHeader from "./clockout/ClockOutHeader";
-import ClockOutBody from "./clockout/ClockOutBody";
+import ClockOutHeader from "./kiosk/ClockOutHeader";
+import ClockOutBody from "./kiosk/ClockOutBody";
 import CustomButton, {
   ButtonColors,
 } from "../../common/components/CustomButton";
-import ClockOut from "./clockout/ClockOut";
+import ClockOut from "./kiosk/ClockOut";
 import InformationContainer from "../../common/components/InformationContainer";
 import BackgroundContainer from "../../common/components/BackgroundContainer";
 import { Container, Row } from "react-bootstrap";
