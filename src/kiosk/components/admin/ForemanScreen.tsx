@@ -17,7 +17,7 @@ export default function Foreman(props: ForemanProps) {
   return (
     <>
       <BackgroundContainer split />
-      <InformationContainer>
+      <InformationContainer white>
         <ForemanBody  completedInformation={(list) => setData(list)}/>
       </InformationContainer>
       <CustomButton

@@ -19,7 +19,7 @@ export default function ClientSelect(props: ClientSelectProps) {
   return (
     <>
       <BackgroundContainer solid />
-      <InformationContainer>
+      <InformationContainer white>
           <ClientSearch />
       </InformationContainer>
       <CustomButton

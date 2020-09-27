@@ -12,7 +12,7 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
   return (
     <>
       <BackgroundContainer solid />
-      <InformationContainer>
+      <InformationContainer white>
         <Container className='admin-menu-body'>
           <ListGroup style={{border: 'none'}}>
             <ListGroup.Item>

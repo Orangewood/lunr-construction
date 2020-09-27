@@ -24,12 +24,7 @@ export default function AdminApp(props: AdminMenuBodyProps): JSX.Element {
   return (
     <>
       {selectedApp === AppList.home && (
-        <AdminOptionsList
-          clickedApp={(value) => {
-            setSelectedApp(value);
-            console.log(selectedApp);
-          }}
-        />
+        <AdminOptionsList clickedApp={(value) => setSelectedApp(value)} />
       )}
       {selectedApp === AppList.client && (
         <ClientSelect
