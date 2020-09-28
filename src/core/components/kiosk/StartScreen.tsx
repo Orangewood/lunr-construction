@@ -1,16 +1,19 @@
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import CustomButton, {
   ButtonColors,
 } from "../../../common/components/CustomButton";
-import "../../scss/Kiosk.scss";
+import "../../scss/kiosk/Kiosk.scss";
 
-interface StartScreenProps {}
+interface StartScreenProps {
+  onClickedStart: (clicked: boolean)  => void;
+}
 
 export default function StartScreen(props: StartScreenProps) {
+  const {onClickedStart} = props;
   const currentTime = new Date();
   return (
-    <div id='start-screen-body'>
+    <Container fluid id='start-screen-body'>
       <Row id="start-screen-time">
         {currentTime.toLocaleTimeString("en-US", {
           hour: "2-digit",
@@ -24,13 +27,13 @@ export default function StartScreen(props: StartScreenProps) {
           year: "numeric",
         })}
       </Row>
-      <Row id='start-screen-button'>
+      <div id='start-screen-button'>
         <CustomButton
           color={ButtonColors.green}
           text={"Start"}
-          onClickedButton={() => console.log("test")}
+          onClickedButton={() => onClickedStart(true)}
         />
-      </Row>
+      </div>
       <Row>
         <Col>1st Circle here</Col>
         <Col>2nd Circle here</Col>
@@ -44,6 +47,6 @@ export default function StartScreen(props: StartScreenProps) {
           <Row>123456789</Row>
         </Col>
       </Row>
-    </div>
+    </Container>
   );
 }

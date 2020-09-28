@@ -6,21 +6,24 @@ import CustomButton, {
 } from "../../../common/components/CustomButton";
 import InformationContainer from "../../../common/components/InformationContainer";
 import StartScreen from "./StartScreen";
+import CheckIn from "./CheckIn";
 
 interface ClockOutPageProps {}
 
 export default function ClockOutPage(props: ClockOutPageProps) {
+  const [showClockedIn, setShowClockIn] = useState<boolean>(false);
   return (
     <>
       <BackgroundContainer building />
-      <InformationContainer white={false}>
-        <StartScreen />
-      </InformationContainer>
-      {/* <CustomButton
-        color={ButtonColors.green}
-        text={"Start"}
-        onClickedButton={() => console.log("test")}
-      /> */}
+
+      {!showClockedIn && (
+        <InformationContainer white={false}>
+          <StartScreen
+            onClickedStart={(clicked: boolean) => setShowClockIn(clicked)}
+          />
+        </InformationContainer>
+      )}
+      {showClockedIn && <CheckIn />}
     </>
   );
 }

@@ -1,5 +1,5 @@
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 768px) {
     .solid-grey-background{
         position: absolute;
         background: #D7D0C8;
@@ -38,7 +38,7 @@
         position: absolute;
         background-image: url(../../core/images/Building.jpg);
         // background-size: 100% 100%;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
         z-index: -1;

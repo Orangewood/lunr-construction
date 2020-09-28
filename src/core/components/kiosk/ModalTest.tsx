@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Container, Row } from 'react-bootstrap';
 import CustomButton, { ButtonColors } from '../../../common/components/CustomButton';
 
-import '../../scss/ModalTest.scss';
+import '../../scss/kiosk/ModalTest.scss';
 
 interface ModalTestProps {
     idolModal?: boolean;

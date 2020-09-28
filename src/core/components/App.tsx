@@ -22,9 +22,10 @@ import ModalTest from "./kiosk/ModalTest";
 export default function App() {
   return (
     <>
-      <AdminMenu />
-      {/* <ClockOut /> */}
+      {/* <AdminMenu /> */}
+      <ClockOut />
       {/* <IdolModal signOut={() => console.log('test')}/> */}
+      {/* 90% opactiy */}
       {/* <ModalTest /> */}
     </>
   );

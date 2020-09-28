@@ -1,6 +1,15 @@
 #start-screen-body {
     position: absolute;
     transform: scale(-1, 1);
-    text-align: left;
     font-family: "Source Serif Pro", serif;
+    width: auto;
+    .row{
+        margin-top: 30%;
+    }
+}
+
+#start-screen-button {
+    position: absolute;
+    left: 0;
+    width: 100vw;
 }
