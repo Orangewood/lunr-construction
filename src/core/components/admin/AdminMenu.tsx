@@ -10,24 +10,24 @@ import AuthorizeScreen from "./AuthorizeScreen";
 interface AdminMenuProps {}
 
 export default function AdminMenu(props: AdminMenuProps): JSX.Element {
-  const [clickedLogIn, setClickedLogIn] = useState<boolean>(false);
+  const [userAuthenticated, setUserAuthenticated] = useState<boolean>(false);
   return (
     <>
-      {!clickedLogIn && (
+      {!userAuthenticated && (
         <>
           <BackgroundContainer inverted />
-          <AuthorizeScreen onLoginButtonClick={() => setClickedLogIn(true)} />
+          <AuthorizeScreen onLoginButtonClick={() => setUserAuthenticated(true)} />
           <CustomButton
             id='authorize-button'
             text={"Sign In"}
             color={ButtonColors.blue}
-            onClickedButton={() => setClickedLogIn(true)}
+            onClickedButton={() => setUserAuthenticated(true)}
           />
         </>
       )}
       {/* TO DO: Boolean from T-sheets authentication to be passed into render condition */}
 
-      {clickedLogIn && <AdminApp />}
+      {userAuthenticated && <AdminApp />}
     </>
   );
 }

@@ -1,25 +1,36 @@
-    .information-container, .information-container-black{
-        position: absolute;
-        border-radius: 0px 100px 100px 0px;
-        background: #fff;
-        width: 90vw;
-        height: 80vh;
-        box-shadow: 5px 10px 8px 10px #888888;
-        z-index: -1;
-        top:10%;
-        // transition: all .4s;
-
-        &-black{
-            position: absolute;
-            background: #000000;
-            color: #fff;
-            transform: scale(-1, 1);
-            width: 70vw;
-            height: 70vh;
-            right: 0;
-            top:15%;
-            overflow: hidden;
-            box-shadow: none;
-        }
-    }
-
+.information-container,
+.information-container-black,
+.information-container-black-reverse {
+  position: absolute;
+  border-radius: 0px 100px 100px 0px;
+  background: #fff;
+  width: 90vw;
+  height: 80vh;
+  box-shadow: 5px 10px 8px 10px #888888;
+  z-index: -1;
+  top: 10%;
+  // transition: all .4s;
+  &-black {
+    background: #000000;
+    color: #fff;
+    transform: scale(-1, 1);
+    width: 70vw;
+    height: 70vh;
+    right: 0;
+    top: 15%;
+    overflow: hidden;
+    box-shadow: none;
+  }
+  &-black-reverse {
+    border-radius: 0px 100px 0px 0px;
+    position: absolute;
+    background: #000000;
+    color: #fff;
+    width: 90vw;
+    height: 65vh;
+    left: 0;
+    top: 35%;
+    overflow: hidden;
+    box-shadow: none;
+  }
+}

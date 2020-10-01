@@ -25,7 +25,6 @@ export default function App() {
       {/* <AdminMenu /> */}
       <ClockOut />
       {/* <IdolModal signOut={() => console.log('test')}/> */}
-      {/* 90% opactiy */}
       {/* <ModalTest /> */}
     </>
   );

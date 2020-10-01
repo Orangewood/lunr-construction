@@ -6,7 +6,7 @@ import CustomButton, {
 } from "../../../common/components/CustomButton";
 import InformationContainer from "../../../common/components/InformationContainer";
 import StartScreen from "./StartScreen";
-import CheckIn from "./CheckIn";
+import CameraScreen from "./CameraScreen";
 
 interface ClockOutPageProps {}
 
@@ -17,13 +17,13 @@ export default function ClockOutPage(props: ClockOutPageProps) {
       <BackgroundContainer building />
 
       {!showClockedIn && (
-        <InformationContainer white={false}>
+        <InformationContainer kioskHome>
           <StartScreen
             onClickedStart={(clicked: boolean) => setShowClockIn(clicked)}
           />
         </InformationContainer>
       )}
-      {showClockedIn && <CheckIn />}
+      {showClockedIn && <CameraScreen/>}
     </>
   );
 }

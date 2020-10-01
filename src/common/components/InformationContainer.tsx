@@ -3,21 +3,18 @@ import "../scss/InformationContainer.scss";
 
 interface InformationContainerProps {
   [x: string]: ReactNode;
-  white: boolean;
-  clockIn?: boolean;
+  white?: boolean;
+  kioskHome?: boolean;
 }
 
-export default function InformationContainer(props: InformationContainerProps) {
-  const { white, clockIn } = props;
-  return (
-    <>
-      {white ? (
-        <div className='information-container'>{props.children}</div>
-      ) : clockIn ? (
-        <div className='information-container-clock-in'>{props.children}</div>
-      ) : (
-        <div className='information-container-black'>{props.children}</div>
-      )}
-    </>
-  );
+export default function InformationContainer(
+  props: InformationContainerProps
+): JSX.Element {
+  const { white, kioskHome } = props;
+
+  if (white)
+    return <div className='information-container'>{props.children}</div>;
+  if (kioskHome)
+    return <div className='information-container-black'>{props.children}</div>;
+  else return <div className='information-container-black-reverse'></div>;
 }

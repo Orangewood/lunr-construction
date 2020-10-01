@@ -1,16 +1,18 @@
 import React from "react";
 import BackgroundContainer from "../../../common/components/BackgroundContainer";
 import InformationContainer from "../../../common/components/InformationContainer";
+import CameraScreenBody from "./CameraScreenBody";
 
 interface CheckInProps {
-  onPersonSelected: () => boolean;
+  // onPersonSelected: () => boolean;
 }
 
 export default function CheckIn(props: CheckInProps) {
   return (
     <>
-      <BackgroundContainer solid />
-      <InformationContainer white>
+      <BackgroundContainer home />
+      <InformationContainer>
+        <CameraScreenBody client={"test"} />
       </InformationContainer>
     </>
   );
