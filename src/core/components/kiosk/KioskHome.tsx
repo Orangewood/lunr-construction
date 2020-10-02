@@ -5,11 +5,11 @@ import CustomButton, {
 } from "../../../common/components/CustomButton";
 import "../../scss/kiosk/Kiosk.scss";
 
-interface StartScreenProps {
+interface KioskHomeProps {
   onClickedStart: (clicked: boolean)  => void;
 }
 
-export default function StartScreen(props: StartScreenProps) {
+export default function KioskHome(props: KioskHomeProps) {
   const {onClickedStart} = props;
   const currentTime = new Date();
   return (

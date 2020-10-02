@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import AsyncSelect from 'react-select/async';
+import "../../scss/kiosk/Kiosk.scss"
 
 interface CameraScreenBodyProps {
   client: string;
@@ -10,7 +11,7 @@ export default function CameraScreenBody(props: CameraScreenBodyProps) {
   const { client } = props;
   const currentTime = new Date();
   return (
-    <Container>
+    <Container className="camera-screen-body">
       <Row>
         <Row>{`Welcome to ${client}`}</Row>
         <Row>

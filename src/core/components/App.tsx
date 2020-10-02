@@ -8,7 +8,7 @@ import ClockOutBody from "./kiosk/ClockOutBody";
 import CustomButton, {
   ButtonColors,
 } from "../../common/components/CustomButton";
-import ClockOut from "./kiosk/ClockOut";
+import KioskApp from "./kiosk/KioskApp";
 import InformationContainer from "../../common/components/InformationContainer";
 import BackgroundContainer from "../../common/components/BackgroundContainer";
 import { Container, Row } from "react-bootstrap";
@@ -23,7 +23,7 @@ export default function App() {
   return (
     <>
       {/* <AdminMenu /> */}
-      <ClockOut />
+      <KioskApp />
       {/* <IdolModal signOut={() => console.log('test')}/> */}
       {/* <ModalTest /> */}
     </>
