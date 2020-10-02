@@ -3,16 +3,7 @@ import AdminOptionsList from "./AdminOptionList";
 import ClientSelect from "./ClientSelect";
 import Foreman from "./ForemanScreen";
 import "../../scss/admin/Admin.scss";
-
-
-export enum AppList {
-  home = 0,
-  client = 1,
-  thermometer = 2,
-  background = 3,
-  logoImage = 4,
-  foreman = 5,
-}
+import { AppList } from "../../modules/AppList";
 
 interface AdminMenuBodyProps {
   apiInformation?: any; //Api class to be sent here

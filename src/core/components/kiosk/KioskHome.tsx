@@ -1,52 +1,21 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import CustomButton, {
-  ButtonColors,
-} from "../../../common/components/CustomButton";
-import "../../scss/kiosk/Kiosk.scss";
+import BackgroundContainer from "../../../common/components/BackgroundContainer";
+import InformationContainer from "../../../common/components/InformationContainer";
+import { AppList } from "../../modules/AppList";
+import KioskHomeBody from "./KioskHomeBody";
 
 interface KioskHomeProps {
-  onClickedStart: (clicked: boolean)  => void;
+  onClickedStart: (app: number) => void;
 }
 
 export default function KioskHome(props: KioskHomeProps) {
-  const {onClickedStart} = props;
-  const currentTime = new Date();
+  const { onClickedStart } = props;
   return (
-    <Container fluid id='start-screen-body'>
-      <Row id="start-screen-time">
-        {currentTime.toLocaleTimeString("en-US", {
-          hour: "2-digit",
-          minute: "2-digit",
-        })}
-      </Row>
-      <Row>
-        {currentTime.toLocaleDateString("en-US", {
-          month: "long",
-          day: "2-digit",
-          year: "numeric",
-        })}
-      </Row>
-      <div id='start-screen-button'>
-        <CustomButton
-          color={ButtonColors.green}
-          text={"Start"}
-          onClickedButton={() => onClickedStart(true)}
-        />
-      </div>
-      <Row>
-        <Col>1st Circle here</Col>
-        <Col>2nd Circle here</Col>
-      </Row>
-
-      <Row>
-        <Col>Picture</Col>
-        <Col>
-          <Row>FirstName LastName</Row>
-          <Row>Foreman for ClientName</Row>
-          <Row>123456789</Row>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <BackgroundContainer building />
+      <InformationContainer kioskHome>
+        <KioskHomeBody onClickedStart={() => onClickedStart(AppList.cameraScreen)} />
+      </InformationContainer>
+    </>
   );
 }

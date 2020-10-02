@@ -5,30 +5,26 @@ import CustomButton, {
   ButtonColors,
 } from "../../../common/components/CustomButton";
 import InformationContainer from "../../../common/components/InformationContainer";
-import KioskHome from './KioskHome'
+import KioskHome from "./KioskHome";
 import CameraScreen from "./CameraScreen";
 import ClockScreen from "./ClockScreen";
+import { AppList } from "../../modules/AppList";
 
 interface KioskAppProps {}
 
 export default function KioskApp(props: KioskAppProps) {
-  const [showCameraScreen, setShowCameraScreen] = useState<boolean>(false);
-  const [showClockScreen, setShowClockScreen] = useState<boolean>(true)
+  const [selectedApp, setSelectedApp] = useState<AppList>(AppList.kioskHome);
+
   return (
     <>
-      {/* <BackgroundContainer building />
-      {!showCameraScreen && (
-        <InformationContainer kioskHome>
-          <KioskHome
-            onClickedStart={(clicked: boolean) => setShowCameraScreen(clicked)}
-          />
-        </InformationContainer>
-      )} */}
-      {/* {showCameraScreen && <CameraScreen/>} */}
+      {selectedApp === AppList.kioskHome && (
+        <KioskHome onClickedStart={(value) => setSelectedApp(value)} />
+      )}
+      {selectedApp === AppList.cameraScreen && <CameraScreen />}
 
-      {showClockScreen && <ClockScreen />}
-
-      
+      {selectedApp === AppList.clockInAndOut && (
+        <ClockScreen onClickedHome={(value) => setSelectedApp(value)} />
+      )}
     </>
   );
 }
