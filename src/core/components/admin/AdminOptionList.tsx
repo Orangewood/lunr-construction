@@ -2,7 +2,8 @@ import React from "react";
 import { Col, Container, ListGroup, Row } from "react-bootstrap";
 import BackgroundContainer from "../../../common/components/BackgroundContainer";
 import InformationContainer from "../../../common/components/InformationContainer";
-import { AppList } from "./AdminApp";
+import { AppList } from "../../modules/AppList";
+import "../../scss/admin/Admin.scss";
 
 interface AdminOptionsListProps {
   clickedApp: (app: number) => void;
@@ -14,16 +15,14 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
       <BackgroundContainer solid />
       <InformationContainer white>
         <Container className='admin-menu-body'>
-          <ListGroup style={{border: 'none'}}>
+          <ListGroup style={{ border: "none" }}>
             <ListGroup.Item>
               <Row>
                 <Col xs={10} sm={10}>
                   Select Client
                 </Col>
                 <Col xs={2} sm={2}>
-                  <button onClick={() => clickedApp(AppList.client)}>
-                    Test
-                  </button>
+                  <a onClick={() => clickedApp(AppList.client)}>{">"}</a>
                 </Col>
               </Row>
             </ListGroup.Item>
@@ -35,9 +34,7 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
                   Select the Thermometer
                 </Col>
                 <Col xs={2} sm={2}>
-                  <button onClick={() => clickedApp(AppList.thermometer)}>
-                    Test
-                  </button>
+                  <a onClick={() => clickedApp(AppList.thermometer)}>{">"}</a>
                 </Col>
               </Row>
             </ListGroup.Item>
@@ -61,9 +58,7 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
                   Set Background Image
                 </Col>
                 <Col xs={2} sm={2}>
-                  <button onClick={() => clickedApp(AppList.background)}>
-                    Test
-                  </button>
+                  <a onClick={() => clickedApp(AppList.background)}>{">"}</a>
                 </Col>
               </Row>
             </ListGroup.Item>
@@ -75,9 +70,7 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
                   Set Logo Image
                 </Col>
                 <Col xs={2} sm={2}>
-                  <button onClick={() => clickedApp(AppList.logoImage)}>
-                    Test
-                  </button>
+                  <a onClick={() => clickedApp(AppList.logoImage)}>{">"}</a>
                 </Col>
               </Row>
             </ListGroup.Item>
@@ -89,9 +82,7 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
                   Set Foreman Info
                 </Col>
                 <Col xs={2} sm={2}>
-                  <button onClick={() => clickedApp(AppList.foreman)}>
-                    Test
-                  </button>
+                  <a onClick={() => clickedApp(AppList.foreman)}>{">"}</a>
                 </Col>
               </Row>
             </ListGroup.Item>

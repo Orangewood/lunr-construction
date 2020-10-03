@@ -10,7 +10,7 @@ interface AdminMenuBodyProps {
 }
 
 export default function AdminApp(props: AdminMenuBodyProps): JSX.Element {
-  const [selectedApp, setSelectedApp] = useState<AppList>(0);
+  const [selectedApp, setSelectedApp] = useState<AppList>(AppList.home);
 
   return (
     <>

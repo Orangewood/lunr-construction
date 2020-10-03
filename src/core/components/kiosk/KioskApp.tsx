@@ -1,10 +1,4 @@
-import React, { Children, useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
-import BackgroundContainer from "../../../common/components/BackgroundContainer";
-import CustomButton, {
-  ButtonColors,
-} from "../../../common/components/CustomButton";
-import InformationContainer from "../../../common/components/InformationContainer";
+import React, { useState } from "react";
 import KioskHome from "./KioskHome";
 import CameraScreen from "./CameraScreen";
 import ClockScreen from "./ClockScreen";

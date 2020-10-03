@@ -4,7 +4,7 @@ import CustomButton, {
   ButtonColors,
 } from "../../../common/components/CustomButton";
 import InformationContainer from "../../../common/components/InformationContainer";
-import { AppList } from "./AdminApp";
+import { AppList } from "../../modules/AppList";
 import ForemanBody from "./ForemanBody";
 
 interface ForemanProps {

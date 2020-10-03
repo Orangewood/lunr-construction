@@ -1,38 +1,42 @@
-.admin-menu-body{
-    text-align: left;
-    position: absolute;
-    top: 10%;
-    font-family: "Source Serif Pro", serif;
-    font-size:  large;
-    width: 90vw;
-    overflow: hidden;
+.admin-menu-body {
+  text-align: left;
+  position: absolute;
+  top: 10%;
+  font-family: "Source Serif Pro", serif;
+  font-size: large;
+  width: 90vw;
+  overflow: hidden;
 }
 
-#authorize-container{
-    position: absolute;
-    font-family: "Source Serif Pro", serif;
-    background-size: cover;
-    z-index: 1;
-    text-align: center;
-    top:20%;
-    margin-left: 20%;
-    overflow: hidden;
+#authorize-container {
+  position: absolute;
+  font-family: "Source Serif Pro", serif;
+  background-size: cover;
+  z-index: 1;
+  text-align: center;
+  top: 20%;
+  margin-left: 20%;
+  overflow: hidden;
 }
 
-#quickbooks-container{
-    margin-top: 10%;
-    overflow: hidden;
+#quickbooks-container {
+  margin-top: 10%;
+  overflow: hidden;
 }
 
-#authorize-button{
-    position: absolute;
-    right: 0;
-    z-index:2;
-    overflow: hidden;
-    top: 70%;
+#authorize-button {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  overflow: hidden;
+  top: 70%;
 }
 
-#quickbooks-logo{
-    width: 70vw;
-    overflow: hidden;
+#quickbooks-logo {
+  width: 70vw;
+  overflow: hidden;
+}
+
+.list-group-item {
+  border: 0 !important;
 }
