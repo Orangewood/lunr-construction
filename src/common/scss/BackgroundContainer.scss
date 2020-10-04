@@ -18,10 +18,10 @@
   .nested,
   .nested-inverted {
     position: absolute;
-    border-radius: 0px 25px 25px 0px;
+    border-radius: 0px 25px 0px 0px;
     background: #d7d0c8;
-    width: 95vw;
-    height: 95vh;
+    width: 90vw;
+    height: 90vh;
     z-index: -1;
     bottom: 0;
     overflow: hidden;

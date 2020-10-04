@@ -23,9 +23,9 @@ export default function App() {
   return (
     <>
       {/* <AdminMenu /> */}
-      {/* <KioskApp /> */}
+      <KioskApp />
       {/* <IdolModal signOut={() => console.log('test')}/> */}
-      <ModalTest />
+      {/* <ModalTest /> */}
     </>
   );
 }

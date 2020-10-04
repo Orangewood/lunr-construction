@@ -1,5 +1,6 @@
 import React from "react";
 import { Row, Col, Container } from "react-bootstrap";
+import "../../scss/kiosk/Kiosk.scss"
 
 interface ClockOutHeaderProps {
   dayTotal: string;
@@ -8,13 +9,13 @@ interface ClockOutHeaderProps {
 
 export default function ClockOutHeader(props: ClockOutHeaderProps): JSX.Element {
   return (
-    <Container fluid>
+    <Container className="clock-header">
       <Row>
-        <Col>
+        <Col xs={{span: 3, offset: 1}}>
           Day Total
           <Col>{props.weekTotal}</Col>
         </Col>
-        <Col>
+        <Col xs={{span: 4, offset: 0}}>
           Week Total
           <Col>{props.weekTotal}</Col>
         </Col>

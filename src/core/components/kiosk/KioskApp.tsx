@@ -19,6 +19,7 @@ export default function KioskApp(props: KioskAppProps) {
       {selectedApp === AppList.clockInAndOut && (
         <ClockScreen onClickedHome={(value) => setSelectedApp(value)} />
       )}
+      {/* <ClockScreen onClickedHome={(value) => setSelectedApp(value)} clockIn={true} /> */}
     </>
   );
 }

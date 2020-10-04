@@ -1,73 +1,80 @@
 .modal-wrapper {
-    position: absolute;
-    background: white;
-    border: 1px solid #d0cccc;
-    border-radius: 0px 25px 25px 0px;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17);
-    transition: all .8s;
-    width: 70vw;
-    top: 30%;
-    left: 0;
-    overflow: hidden;
-    height: 30vh;
-    }
-    
-    .modal-test {
-    height: 40px;
-    line-height: 40px;
-    padding: 5px 20px;
-    text-align: left;
-    }
-     
-    .modal-body {
-    // padding: 10px 15px;
-    // text-align: center;
-    height:20vh;
-    }
+  position: absolute;
+  background: white;
+  border: 1px solid #d0cccc;
+  border-radius: 0px 25px 25px 0px;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  transition: all 0.8s;
+  width: 70vw;
+  top: 30%;
+  left: 0;
+  overflow: hidden;
+  height: 30vh;
+}
 
-    #modal-button {
-        position: absolute;
-        left: 15%;
-        top:45%;
-    }
-    
-    .modal-footer {
-    background: #e2e2e2;
-    height: 35px;
-    padding: 15px;
-    }
-    
-    .close-modal-btn {
-    color: white;
-    cursor: pointer;
-    float: right;
-    font-size: 30px;
-    margin: 0;
-    }
-    
-    .close-modal-btn:hover {
-    color: black;
-    }
-    
-    .btn-cancel {
-    background-color: #b71c1c;
-    float: left;
-    }
-    
-    .btn-continue {
-    background-color: #1b5e20;
-    float: right;
-    }
-    
-    .back-shed {
-    background-color: rgba(48, 49, 48, 0.42);
-    height: 100%;
-    position: fixed;
-    transition: all 1.3s;
-    width: 100%;
-    }
-    
-    .open-modal-btn {
-    margin: 15px;
-    padding: 10px;
-    }
+.modal-close-button {
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  overflow: hidden;
+}
+
+.modal-header-text {
+  left: 0;
+}
+
+.modal-body{
+  position: absolute;
+  top:20%;
+  left: 30%;
+}
+
+#modal-text {
+  text-align: center;
+}
+
+#modal-button {
+  position: absolute;
+  left: 7%;
+  top: 60%;
+}
+
+// .modal-footer {
+//   background: #e2e2e2;
+//   height: 35px;
+//   padding: 15px;
+// }
+
+// .close-modal-btn {
+//   color: white;
+//   cursor: pointer;
+//   font-size: 30px;
+//   margin: 0;
+// }
+
+// .close-modal-btn:hover {
+//   color: black;
+// }
+
+// .btn-cancel {
+//   background-color: #b71c1c;
+//   float: left;
+// }
+
+// .btn-continue {
+//   background-color: #1b5e20;
+//   float: right;
+// }
+
+// .back-shed {
+//   background-color: rgba(48, 49, 48, 0.42);
+//   height: 100%;
+//   position: fixed;
+//   transition: all 1.3s;
+//   width: 100%;
+// }
+
+// .open-modal-btn {
+//   margin: 15px;
+//   padding: 10px;
+// }
