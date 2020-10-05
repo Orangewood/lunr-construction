@@ -8,7 +8,7 @@ import InformationContainer from "../../../common/components/InformationContaine
 import { AppList } from "../../modules/AppList";
 import ClockOutHeader from "./ClockOutHeader";
 import ClockScreenBody from "./ClockScreenBody";
-import ModalTest from "./ModalTest";
+import ModalTest from "./ClockModal";
 
 interface ClockScreenProps {
   onClickedHome: (app: number) => void;

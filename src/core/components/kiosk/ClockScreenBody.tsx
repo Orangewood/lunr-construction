@@ -17,12 +17,15 @@ export default function ClockScreenBody(props: ClockScreenBodyProps) {
         <Col>
           <h2>{clockIn ? "Clock In" : "Clock Out"}</h2>
           <Row>
+            {/*Pass props for construction site here */}
+          </Row>
+          <Row className="mx-2">
             {currentTime.toLocaleTimeString("en-US", {
               hour: "2-digit",
               minute: "2-digit",
             })}
           </Row>
-          <Row>
+          <Row className="mx-2">
             {currentTime.toLocaleDateString("en-US", {
               month: "short",
               day: "2-digit",

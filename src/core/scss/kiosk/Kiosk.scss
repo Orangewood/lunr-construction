@@ -1,41 +1,74 @@
 #start-screen-body {
-    position: absolute;
-    transform: scale(-1, 1);
-    font-family: "Source Serif Pro", serif;
-    width: auto;
-    .row{
-        margin-top: 30%;
-    }
+  position: absolute;
+  transform: scale(-1, 1);
+  font-family: "Source Serif Pro", serif;
+  width: 100%;
+  height: 100%;
 }
 
 #start-screen-button {
-    position: absolute;
-    left: 0;
-    width: 100vw;
+  position: absolute;
+  right: 0;
+  top: 40%;
 }
 
-#camera-screen-body{
-    color: white;
+#start-screen-date {
+  position: absolute;
+  text-align: center;
+  font-size: 24px;
+  right: 30%;
+  top: 22%;
 }
 
-.clock-screen-body{
-    position: absolute;
-    top: 20%;
+#start-screen-time {
+  position: absolute;
+  text-align: center;
+  right:20%;
+  top: 8%;
+  font-size: 60px;
 }
 
-#clock-screen-button{
-position: absolute;
-left: 0;
-top: 70%;
+#start-screen-info {
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  right: 25%;
 }
 
-#clock-screen-button-home{
-position: absolute;
-right:0;
-top: 87%;
+#start-screen-circles {
+  position: absolute;
+  text-align: center;
+  top: 60%;
+  right: 25%;
 }
 
-.clock-header{
-    position: absolute;
-    top: 15%;
+.clock-screen-body {
+  position: absolute;
+  top: 20%;
+  font-family: "Source Serif Pro", serif;
+}
+
+#clock-screen-button {
+  position: absolute;
+  left: 0;
+  top: 70%;
+}
+
+#clock-screen-button-home {
+  position: absolute;
+  right: 0;
+  top: 87%;
+}
+
+.clock-header {
+  position: absolute;
+  top: 15%;
+}
+
+#camera-screen-body {
+  color: white;
+}
+
+.start-screen-information {
+  position: absolute;
 }

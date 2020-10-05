@@ -5,6 +5,7 @@ import "../../scss/kiosk/Kiosk.scss"
 interface ClockOutHeaderProps {
   dayTotal: string;
   weekTotal: string;
+  //Pass props from api timesheet here to be displayed below
 }
 
 export default function ClockOutHeader(props: ClockOutHeaderProps): JSX.Element {

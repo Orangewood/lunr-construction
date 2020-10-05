@@ -4,27 +4,16 @@ import CustomButton, {
   ButtonColors,
 } from "../../../common/components/CustomButton";
 
-import "../../scss/kiosk/ModalTest.scss";
+import "../../scss/kiosk/IdolModal.scss";
 
-interface ModalTestProps {
-  onClickedHome: () => void;
-  onClosedModal: () => void;
-  info?: any; //Information to be passed from api or localstorage to show in modal
+interface IdolModalProps {
+  onClickedYes: () => void;
+  onClickedSignOut: () => void;
   showModal?: boolean;
-  clockIn?: boolean;
-  clockOut?: boolean;
-  error?: boolean;
 }
 
-export default function ModalTest(props: ModalTestProps): JSX.Element {
-  const {
-    showModal,
-    clockIn,
-    clockOut,
-    error,
-    onClickedHome,
-    onClosedModal,
-  } = props;
+export default function IdolModal(props: IdolModalProps): JSX.Element {
+  const { showModal, onClickedYes, onClickedSignOut } = props;
   const [show, setShow] = useState<boolean>(true);
   const currentTime = new Date();
 
@@ -47,16 +36,16 @@ export default function ModalTest(props: ModalTestProps): JSX.Element {
               className='modal-close-button'
               onClick={() => {
                 setShow(false);
-                onClosedModal();
+                onClickedSignOut();
               }}
             >
               X
             </button>
             <Row className='modal-body'>
-              {clockIn && (
+              {showModal && (
                 <>
                   <div id='modal-text'>
-                    You <p style={{ color: "#009245" }}>clocked in</p> at
+                    You <span style={{ color: "#009245" }}>clocked in</span> at
                     <br />
                     {currentTime.toLocaleTimeString("en-US", {
                       hour: "2-digit",
@@ -66,30 +55,23 @@ export default function ModalTest(props: ModalTestProps): JSX.Element {
                   </div>
                 </>
               )}
-              {clockOut && (
-                <div id='modal-text'>
-                  You <div style={{ color: "#009245" }}>clocked out</div> at
-                  <br />
-                  {currentTime.toLocaleTimeString("en-US", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    second: "2-digit",
-                  })}
-                </div>
-              )}
-              {error && (
-                <div id='modal-text'>
-                  You are Not clocked in. Please call your supervisor.
-                </div>
-              )}
             </Row>
             <CustomButton
               id='modal-button'
-              color={ButtonColors.blue}
-              text={"Back to Home"}
+              color={ButtonColors.green}
+              text={"Yes, I'm here"}
               onClickedButton={() => {
                 setShow(false);
-                onClickedHome();
+                onClickedYes();
+              }}
+            ></CustomButton>
+            <CustomButton
+              id='modal-button'
+              color={ButtonColors.orange}
+              text={"Sign me out"}
+              onClickedButton={() => {
+                setShow(false);
+                onClickedSignOut();
               }}
             ></CustomButton>
           </div>

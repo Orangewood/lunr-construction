@@ -6,47 +6,53 @@ import CustomButton, {
 import "../../scss/kiosk/Kiosk.scss";
 
 interface KioskHomeBodyProps {
-  onClickedStart: ()  => void;
+  onClickedStart: () => void;
 }
 
 export default function KioskHomeBody(props: KioskHomeBodyProps) {
-  const {onClickedStart} = props;
+  const { onClickedStart } = props;
   const currentTime = new Date();
   return (
-    <Container fluid id='start-screen-body'>
-      <Row id="start-screen-time">
-        {currentTime.toLocaleTimeString("en-US", {
-          hour: "2-digit",
-          minute: "2-digit",
-        })}
-      </Row>
-      <Row>
-        {currentTime.toLocaleDateString("en-US", {
-          month: "long",
-          day: "2-digit",
-          year: "numeric",
-        })}
-      </Row>
-      <div id='start-screen-button'>
-        <CustomButton
-          color={ButtonColors.green}
-          text={"Start"}
-          onClickedButton={() => onClickedStart()}
-        />
+    <>
+      <div id='start-screen-body'>
+        <div id='start-screen-time'>
+          <Row>
+            {currentTime.toLocaleTimeString("en-US", {
+              hour: "2-digit",
+              minute: "2-digit",
+            })}
+          </Row>
+        </div>
+        <div id='start-screen-date'>
+          <Row>
+            {currentTime.toLocaleDateString("en-US", {
+              month: "long",
+              day: "2-digit",
+              year: "numeric",
+            })}
+          </Row>
+        </div>
+        <div>
+          <CustomButton
+            id='start-screen-button'
+            color={ButtonColors.green}
+            text={"Start"}
+            onClickedButton={() => onClickedStart()}
+          />
+        </div>
+        <div id='start-screen-circles'>
+          <Row>
+            <Col>1st Circle here</Col>
+            <Col>2nd Circle here</Col>
+          </Row>
+        </div>
+        <div id='start-screen-info'>
+          <Row>
+            <Col>Picture</Col>
+            <Col>test</Col>
+          </Row>
+        </div>
       </div>
-      <Row>
-        <Col>1st Circle here</Col>
-        <Col>2nd Circle here</Col>
-      </Row>
-
-      <Row>
-        <Col>Picture</Col>
-        <Col>
-          <Row>FirstName LastName</Row>
-          <Row>Foreman for ClientName</Row>
-          <Row>123456789</Row>
-        </Col>
-      </Row>
-    </Container>
+    </>
   );
 }
