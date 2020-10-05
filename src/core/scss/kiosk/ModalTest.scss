@@ -9,7 +9,7 @@
   top: 30%;
   left: 0;
   overflow: hidden;
-  height: 30vh;
+  height: 25vh;
 }
 
 .modal-close-button {
@@ -23,9 +23,9 @@
   left: 0;
 }
 
-.modal-body{
+.modal-body {
   position: absolute;
-  top:20%;
+  top: 20%;
   left: 30%;
 }
 
@@ -39,42 +39,26 @@
   top: 60%;
 }
 
-// .modal-footer {
-//   background: #e2e2e2;
-//   height: 35px;
-//   padding: 15px;
-// }
+.idol-modal-body{
+  position: relative;
+  top: 65%;
+  left: 20%;
+}
 
-// .close-modal-btn {
-//   color: white;
-//   cursor: pointer;
-//   font-size: 30px;
-//   margin: 0;
-// }
+#idol-modal-text {
+  position: absolute;
+  top: 30%;
+  right: 30%;
+  font-family: "Source Serif Pro", serif;
+  font-size: 20px;
+}
 
-// .close-modal-btn:hover {
-//   color: black;
-// }
+#left-col{
+  position: absolute;
+  left: 30%;
+}
 
-// .btn-cancel {
-//   background-color: #b71c1c;
-//   float: left;
-// }
-
-// .btn-continue {
-//   background-color: #1b5e20;
-//   float: right;
-// }
-
-// .back-shed {
-//   background-color: rgba(48, 49, 48, 0.42);
-//   height: 100%;
-//   position: fixed;
-//   transition: all 1.3s;
-//   width: 100%;
-// }
-
-// .open-modal-btn {
-//   margin: 15px;
-//   padding: 10px;
-// }
+#right-col{
+  position: absolute;
+  right:10%;
+}

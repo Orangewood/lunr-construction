@@ -8,8 +8,8 @@ export default function App() {
   return (
     <>
       {/* <AdminMenu /> */}
-      <KioskApp />
-      {/* <IdolModal signOut={() => console.log('test')}/> */}
+      {/* <KioskApp /> */}
+      <IdolModal onClickedSignOut={() => console.log('test')} onClickedYes={() => console.log('test')}/>
       {/* <ClockModal /> */}
     </>
   );

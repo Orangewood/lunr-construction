@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Button, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import CustomButton, {
   ButtonColors,
 } from "../../../common/components/CustomButton";
 
-import "../../scss/kiosk/IdolModal.scss";
+import "../../../common/scss/Button.scss";
+import "../../scss/kiosk/ModalTest.scss";
 
 interface IdolModalProps {
   onClickedYes: () => void;
@@ -41,39 +42,33 @@ export default function IdolModal(props: IdolModalProps): JSX.Element {
             >
               X
             </button>
-            <Row className='modal-body'>
-              {showModal && (
-                <>
-                  <div id='modal-text'>
-                    You <span style={{ color: "#009245" }}>clocked in</span> at
-                    <br />
-                    {currentTime.toLocaleTimeString("en-US", {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                      second: "2-digit",
-                    })}
-                  </div>
-                </>
-              )}
+            <div id="idol-modal-text">Are you still there?</div>
+            <Row className="idol-modal-body">
+              <Col id="left-col">
+                <CustomButton
+                  small
+                  id='button-green-small'
+                  color={ButtonColors.green}
+                  text={"Yes, I'm here"}
+                  onClickedButton={() => {
+                    setShow(false);
+                    onClickedYes();
+                  }}
+                ></CustomButton>
+              </Col>
+              <Col id="right-col">
+                <CustomButton
+                  small
+                  id='button-orange-small'
+                  color={ButtonColors.orange}
+                  text={"Sign me out"}
+                  onClickedButton={() => {
+                    setShow(false);
+                    onClickedSignOut();
+                  }}
+                ></CustomButton>
+              </Col>
             </Row>
-            <CustomButton
-              id='modal-button'
-              color={ButtonColors.green}
-              text={"Yes, I'm here"}
-              onClickedButton={() => {
-                setShow(false);
-                onClickedYes();
-              }}
-            ></CustomButton>
-            <CustomButton
-              id='modal-button'
-              color={ButtonColors.orange}
-              text={"Sign me out"}
-              onClickedButton={() => {
-                setShow(false);
-                onClickedSignOut();
-              }}
-            ></CustomButton>
           </div>
         </Container>
       )}
