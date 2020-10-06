@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import "../../scss/admin/Admin.scss";
 
 interface ForemanBodyProps {
   completedInformation: (data: string[]) => void;
@@ -20,7 +21,7 @@ export default function ForemanBody(props: ForemanBodyProps) {
 
   return (
     <>
-      <Container id='foreman-body'>
+      <div id='foreman-top-container'>
         <Row>
           <Col>Picture</Col>
           <Col>
@@ -28,8 +29,12 @@ export default function ForemanBody(props: ForemanBodyProps) {
             <Row>Foreman for Clientname</Row>
           </Col>
         </Row>
+      </div>
+      <Container id='foreman-body'>
         <Row>
-          <h4>Personal Information</h4>
+          <h4>
+            <b>Personal Information</b>
+          </h4>
         </Row>
         <Row>
           <Col>
@@ -70,7 +75,9 @@ export default function ForemanBody(props: ForemanBodyProps) {
           </Col>
         </Row>
         <Row>
-          <h4>Contact Information</h4>
+          <h4>
+            <b>Contact Information</b>
+          </h4>
         </Row>
         <Row>
           <Col>

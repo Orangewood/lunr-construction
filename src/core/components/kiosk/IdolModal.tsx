@@ -42,21 +42,9 @@ export default function IdolModal(props: IdolModalProps): JSX.Element {
             >
               X
             </button>
-            <div id="idol-modal-text">Are you still there?</div>
-            <Row className="idol-modal-body">
-              <Col id="left-col">
-                <CustomButton
-                  small
-                  id='button-green-small'
-                  color={ButtonColors.green}
-                  text={"Yes, I'm here"}
-                  onClickedButton={() => {
-                    setShow(false);
-                    onClickedYes();
-                  }}
-                ></CustomButton>
-              </Col>
-              <Col id="right-col">
+            <div id='idol-modal-text'>Are you still there?</div>
+            <Row className='idol-modal-body'>
+              <Col id='left-col'>
                 <CustomButton
                   small
                   id='button-orange-small'
@@ -65,6 +53,18 @@ export default function IdolModal(props: IdolModalProps): JSX.Element {
                   onClickedButton={() => {
                     setShow(false);
                     onClickedSignOut();
+                  }}
+                ></CustomButton>
+              </Col>
+              <Col id='right-col'>
+                <CustomButton
+                  small
+                  id='button-green-small'
+                  color={ButtonColors.green}
+                  text={"Yes, I'm here"}
+                  onClickedButton={() => {
+                    setShow(false);
+                    onClickedYes();
                   }}
                 ></CustomButton>
               </Col>

@@ -1,5 +1,6 @@
 import React from 'react';
 import AsyncSelect from 'react-select/async';
+import "../../scss/admin/Admin.scss";
 
 interface ClientSearchProps {
     selectedClient?: (client: string) => void //Probably string from api

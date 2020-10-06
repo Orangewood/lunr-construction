@@ -6,6 +6,7 @@ import CustomButton, {
 import InformationContainer from "../../../common/components/InformationContainer";
 import { AppList } from "../../modules/AppList";
 import ForemanBody from "./ForemanBody";
+import "../../scss/admin/Admin.scss";
 
 interface ForemanProps {
   onClickedSave: (appType: number) => void;
@@ -21,7 +22,7 @@ export default function Foreman(props: ForemanProps) {
         <ForemanBody  completedInformation={(list) => setData(list)}/>
       </InformationContainer>
       <CustomButton
-        id={"client-save"}
+        id={"foreman-save"}
         color={ButtonColors.orange}
         text={"Save Changes"}
         onClickedButton={() => {onClickedSave(AppList.home);
