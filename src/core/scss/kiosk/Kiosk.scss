@@ -9,21 +9,21 @@
 #start-screen-button {
   position: absolute;
   right: 0;
-  top: 40%;
+  top: 37%;
 }
 
 #start-screen-date {
   position: absolute;
   text-align: center;
   font-size: 24px;
-  right: 30%;
+  right: 25%;
   top: 25%;
 }
 
 #start-screen-time {
   position: absolute;
   text-align: center;
-  right:20%;
+  right:15%;
   top: 8%;
   font-size: 60px;
 }
@@ -38,8 +38,9 @@
 #start-screen-circles {
   position: absolute;
   text-align: center;
-  top: 60%;
-  right: 25%;
+  top: 50%;
+  left: 15%;
+  overflow: hidden;
 }
 
 .clock-screen-body {

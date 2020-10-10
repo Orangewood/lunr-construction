@@ -4,6 +4,7 @@ import CustomButton, {
   ButtonColors,
 } from "../../../common/components/CustomButton";
 import "../../scss/kiosk/Kiosk.scss";
+import ProgressBar from "./progress-bar/components/ProgressBar";
 
 interface KioskHomeBodyProps {
   onClickedStart: () => void;
@@ -42,8 +43,26 @@ export default function KioskHomeBody(props: KioskHomeBodyProps) {
         </div>
         <div id='start-screen-circles'>
           <Row>
-            <Col>1st Circle here</Col>
-            <Col>2nd Circle here</Col>
+            <Col>
+              <ProgressBar
+                progress={80}
+                size={120}
+                text={`Laborers`}
+                strokeWidth={15}
+                circleOneStroke='#7c7823'
+                circleTwoStroke={"#21200f"}
+              />
+            </Col>
+            <Col>
+              <ProgressBar
+                progress={80}
+                size={120}
+                text={`Mechanics`}
+                strokeWidth={15}
+                circleOneStroke='#28558c'
+                circleTwoStroke={"#0c2644"}
+              />
+            </Col>
           </Row>
         </div>
         <div id='start-screen-info'>

@@ -9,16 +9,17 @@ export default function App() {
   return (
     <>
       {/* <AdminMenu /> */}
-      {/* <KioskApp /> */}
+      <KioskApp />
       {/* <IdolModal onClickedSignOut={() => console.log('test')} onClickedYes={() => console.log('test')}/> */}
       {/* <ClockModal /> */}
-      <ProgressBar 
+      {/* <ProgressBar 
           progress={80}
-          size={200}
-          strokeWidth={15}
+          size={95}
+          text={`test`}
+          strokeWidth={10}
           circleOneStroke='#d9edfe'
           circleTwoStroke={"red"}
-        />
+        /> */}
     </>
   );
 }

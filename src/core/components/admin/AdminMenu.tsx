@@ -3,7 +3,6 @@ import BackgroundContainer from "../../../common/components/BackgroundContainer"
 import CustomButton, {
   ButtonColors,
 } from "../../../common/components/CustomButton";
-import InformationContainer from "../../../common/components/InformationContainer";
 import AdminApp from "./AdminApp";
 import AuthorizeScreen from "./AuthorizeScreen";
 
@@ -16,7 +15,9 @@ export default function AdminMenu(props: AdminMenuProps): JSX.Element {
       {!userAuthenticated && (
         <>
           <BackgroundContainer inverted />
-          <AuthorizeScreen onLoginButtonClick={() => setUserAuthenticated(true)} />
+          <AuthorizeScreen
+            onLoginButtonClick={() => setUserAuthenticated(true)}
+          />
           <CustomButton
             id='authorize-button'
             text={"Sign In"}

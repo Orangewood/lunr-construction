@@ -1,19 +1,20 @@
 import React, { useEffect, useState, useRef } from "react";
-import PropTypes from "prop-types";
-import "../scss/ProgressBar.scss"
+import "../scss/ProgressBar.scss";
 
 const ProgressBar = (props: {
-  size: any;
-  progress: any;
-  strokeWidth: any;
-  circleOneStroke: any;
-  circleTwoStroke: any;
+  size: number;
+  progress: number;
+  text: string;
+  strokeWidth: number;
+  circleOneStroke: string;
+  circleTwoStroke: string;
 }) => {
   const [offset, setOffset] = useState(0);
   const circleRef = useRef<SVGCircleElement>(null);
   const {
     size,
     progress,
+    text,
     strokeWidth,
     circleOneStroke,
     circleTwoStroke,
@@ -26,10 +27,6 @@ const ProgressBar = (props: {
   useEffect(() => {
     const progressOffset = ((100 - progress) / 100) * circumference;
     setOffset(progressOffset);
-    // if (circleRef && circleRef.current) {
-    //   circleRef.current.style = 
-    //     "transition: stroke-dashoffset 850ms ease-in-out";
-    // }
   }, [setOffset, progress, circumference, offset]);
 
   return (
@@ -54,20 +51,24 @@ const ProgressBar = (props: {
           strokeDasharray={circumference}
           strokeDashoffset={offset}
         />
-        <text x={`${center}`} y={`${center}`} className='svg-circle-text'>
-          {progress}%
+        <text
+          x={`${center}`}
+          y={`${center - center / 4}`}
+          className='svg-circle-text'
+        >
+          {/* api information here */}
+          {`3/3`} 
+        </text>
+        <text
+          x={`${center}`}
+          y={`${center + center / 4}`}
+          className='svg-circle-text'
+        >
+          {text}
         </text>
       </svg>
     </>
   );
-};
-
-ProgressBar.propTypes = {
-  size: PropTypes.number.isRequired,
-  progress: PropTypes.number.isRequired,
-  strokeWidth: PropTypes.number.isRequired,
-  circleOneStroke: PropTypes.string.isRequired,
-  circleTwoStroke: PropTypes.string.isRequired,
 };
 
 export default ProgressBar;
