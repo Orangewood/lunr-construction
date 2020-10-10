@@ -23,7 +23,7 @@
 #start-screen-time {
   position: absolute;
   text-align: center;
-  right:15%;
+  right: 15%;
   top: 8%;
   font-size: 60px;
 }
@@ -39,7 +39,7 @@
   position: absolute;
   text-align: center;
   top: 50%;
-  left: 15%;
+  right: 2%;
   overflow: hidden;
 }
 
@@ -72,4 +72,32 @@
 
 .start-screen-information {
   position: absolute;
+}
+
+.camera-screen-body {
+  position: absolute;
+  top: 7%;
+  left: 20%;
+  font-family: "Source Serif Pro", serif;
+  text-align: center;
+}
+
+#camera-screen-welcome {
+  font-size: 45px;
+}
+
+#camera-screen-welcome-text {
+  line-height: 100%;
+}
+
+#camera-screen-date{
+  text-align: center;
+  font-size: 22px;
+}
+
+.worker-search{
+  position: absolute;
+  top: 40%;
+  width: auto;
+  border-style: 0 !important;
 }

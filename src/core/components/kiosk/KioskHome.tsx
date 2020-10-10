@@ -14,7 +14,7 @@ export default function KioskHome(props: KioskHomeProps) {
     <>
       <BackgroundContainer building />
       <InformationContainer kioskHome>
-        <KioskHomeBody onClickedStart={() => onClickedStart(AppList.clockInAndOut)} />
+        <KioskHomeBody onClickedStart={() => onClickedStart(AppList.cameraScreen)} />
       </InformationContainer>
     </>
   );
