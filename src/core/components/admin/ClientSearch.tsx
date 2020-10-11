@@ -9,7 +9,7 @@ interface ClientSearchProps {
 export default function ClientSearch(props: ClientSearchProps) {
     return (
         <div className="client-search">
-            <AsyncSelect></AsyncSelect>
+            {/* <AsyncSelect loadOptions={[]}></AsyncSelect> */}
         </div>
     )
 }

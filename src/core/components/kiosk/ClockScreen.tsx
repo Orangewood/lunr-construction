@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import BackgroundContainer from "../../../common/components/BackgroundContainer";
 import CustomButton, {
@@ -9,6 +9,7 @@ import { AppList } from "../../modules/AppList";
 import ClockOutHeader from "./ClockOutHeader";
 import ClockScreenBody from "./ClockScreenBody";
 import ModalTest from "./ClockModal";
+import IdolModal from "./IdolModal";
 
 interface ClockScreenProps {
   onClickedHome: (app: number) => void;
@@ -20,6 +21,28 @@ interface ClockScreenProps {
 export default function ClockScreen(props: ClockScreenProps) {
   const { onClickedHome, clockIn, dayTotal, weekTotal } = props;
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [showIdolModal, setShowIdolModal] = useState<boolean>(false)
+
+  const events = [
+    'mousemove',
+    'click',
+    'keypress'
+  ];
+
+  useEffect(() => { 
+    const timer = setTimeout(() => {
+      setShowIdolModal(true)
+    }, 2000);
+
+
+    for( let e in events) {
+      window.addEventListener(events[e], () => setShowIdolModal(false))
+    }
+    //why is mousemove not working?
+    
+    return () => clearTimeout(timer);
+  }, [showIdolModal]);
+
   return (
     <>
       <BackgroundContainer nested />
@@ -49,6 +72,9 @@ export default function ClockScreen(props: ClockScreenProps) {
           clockIn
         />
       )}
+      {showIdolModal &&
+        <IdolModal onClickedSignOut={() => console.log('test')} onClickedYes={() => setShowIdolModal(false)} />
+      }
     </>
   );
 }

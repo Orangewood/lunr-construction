@@ -12,14 +12,6 @@ export default function App() {
       <KioskApp />
       {/* <IdolModal onClickedSignOut={() => console.log('test')} onClickedYes={() => console.log('test')}/> */}
       {/* <ClockModal /> */}
-      {/* <ProgressBar 
-          progress={80}
-          size={95}
-          text={`test`}
-          strokeWidth={10}
-          circleOneStroke='#d9edfe'
-          circleTwoStroke={"red"}
-        /> */}
     </>
   );
 }

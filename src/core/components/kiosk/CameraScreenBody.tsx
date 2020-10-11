@@ -32,7 +32,7 @@ export default function CameraScreenBody(props: CameraScreenBodyProps) {
           })}
         </Row>
       </Container>
-      <AsyncSelect className='worker-search' placeholder={'Enter your name'}></AsyncSelect>
+      {/* <AsyncSelect className='worker-search' placeholder={'Enter your name'}></AsyncSelect> */}
     </>
   );
 }
