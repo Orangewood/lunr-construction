@@ -6,9 +6,12 @@ import CustomButton, {
 import AdminApp from "./AdminApp";
 import AuthorizeScreen from "./AuthorizeScreen";
 
-interface AdminMenuProps {}
+interface AdminMenuProps {
+  setShowKiosk: (clicked: boolean) => void;
+}
 
 export default function AdminMenu(props: AdminMenuProps): JSX.Element {
+  const {setShowKiosk} = props;
   const [userAuthenticated, setUserAuthenticated] = useState<boolean>(false);
   return (
     <>
@@ -28,7 +31,7 @@ export default function AdminMenu(props: AdminMenuProps): JSX.Element {
       )}
       {/* TO DO: Boolean from T-sheets authentication to be passed into render condition */}
 
-      {userAuthenticated && <AdminApp />}
+      {userAuthenticated && <AdminApp setShowKiosk={(clicked) => setShowKiosk(clicked)}/>}
     </>
   );
 }

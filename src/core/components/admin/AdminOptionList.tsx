@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, ListGroup, Row } from "react-bootstrap";
+import { Button, Col, Container, ListGroup, Row } from "react-bootstrap";
 import BackgroundContainer from "../../../common/components/BackgroundContainer";
 import InformationContainer from "../../../common/components/InformationContainer";
 import { AppList } from "../../modules/AppList";
@@ -7,9 +7,10 @@ import "../../scss/admin/Admin.scss";
 
 interface AdminOptionsListProps {
   clickedApp: (app: number) => void;
+  setShowKiosk: (clicked: boolean) => void;
 }
 export default function AdminOptionsList(props: AdminOptionsListProps) {
-  const { clickedApp } = props;
+  const { clickedApp, setShowKiosk } = props;
   return (
     <>
       <BackgroundContainer solid />
@@ -88,6 +89,7 @@ export default function AdminOptionsList(props: AdminOptionsListProps) {
             </ListGroup.Item>
           </ListGroup>
         </Container>
+        <Button onClick={() => setShowKiosk(true) }>Show Kiosk</Button>
       </InformationContainer>
     </>
   );

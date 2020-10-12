@@ -7,15 +7,17 @@ import { AppList } from "../../modules/AppList";
 
 interface AdminMenuBodyProps {
   apiInformation?: any; //Api class to be sent here
+  setShowKiosk: (clicked: boolean) => void;
 }
 
 export default function AdminApp(props: AdminMenuBodyProps): JSX.Element {
+  const {apiInformation, setShowKiosk} = props;
   const [selectedApp, setSelectedApp] = useState<AppList>(AppList.home);
 
   return (
     <>
       {selectedApp === AppList.home && (
-        <AdminOptionsList clickedApp={(value) => setSelectedApp(value)} />
+        <AdminOptionsList clickedApp={(value) => setSelectedApp(value)} setShowKiosk={(clicked) => setShowKiosk(clicked) }/>
       )}
       {selectedApp === AppList.client && (
         <ClientSelect
