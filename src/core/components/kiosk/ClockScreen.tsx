@@ -32,7 +32,7 @@ export default function ClockScreen(props: ClockScreenProps) {
   useEffect(() => { 
     const timer = setTimeout(() => {
       setShowIdolModal(true)
-    }, 2000);
+    }, 5000);
 
 
     for( let e in events) {
@@ -73,7 +73,7 @@ export default function ClockScreen(props: ClockScreenProps) {
         />
       )}
       {showIdolModal &&
-        <IdolModal onClickedSignOut={() => console.log('test')} onClickedYes={() => setShowIdolModal(false)} />
+        <IdolModal onClickedSignOut={() =>  onClickedHome(AppList.kioskHome)} onClickedYes={() => setShowIdolModal(false)} />
       }
     </>
   );
