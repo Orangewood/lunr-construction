@@ -26,15 +26,11 @@ export default function CustomButton(props: CustomButtonProps): JSX.Element {
   return (
     <>
       <button
-        className={`custom-button-${color}`}
+        className={`custom-button-${color} ${small && 'custom-button-small'}`}
         id={`${id}`}
         onClick={() => onClickedButton(true)}
       >
-        {small ? (
-          <div className='button-text-small'>{text}</div>
-        ) : (
-          <div className='button-text'>{text}</div>
-        )}
+        <div className='button-text'>{text}</div>
       </button>
     </>
   );

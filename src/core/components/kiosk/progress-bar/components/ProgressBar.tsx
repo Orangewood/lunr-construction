@@ -57,7 +57,7 @@ const ProgressBar = (props: {
           className='svg-circle-text'
         >
           {/* api information here */}
-          {`3/3`} 
+          TBD
         </text>
         <text
           x={`${center}`}

@@ -1,99 +1,40 @@
 #start-screen-body {
-  position: absolute;
-  transform: scale(-1, 1);
-  font-family: "Source Serif Pro", serif;
+  position: relative;
   width: 100%;
-  height: 100%;
+  max-width: 350px;
+  margin: 15px auto 0 auto;
 }
 
+
 #start-screen-button {
-  position: absolute;
-  right: 0;
-  top: 37%;
+  position: relative;
+  margin: 0 auto;
+  transform: scale(1.5);
 }
 
 #start-screen-date {
-  position: absolute;
   text-align: center;
   font-size: 24px;
-  right: 25%;
-  top: 25%;
+  
 }
 
 #start-screen-time {
-  position: absolute;
   text-align: center;
-  right: 15%;
-  top: 8%;
-  font-size: 60px;
+  font-size: 80px;
+  line-height: normal;
 }
 
-#start-screen-info {
-  position: absolute;
-  text-align: center;
-  top: 80%;
-  right: 25%;
-}
 
 #start-screen-circles {
-  position: absolute;
   text-align: center;
-  top: 50%;
-  right: 2%;
   overflow: hidden;
 }
 
-.clock-screen-body {
-  position: absolute;
-  top: 20%;
-  font-family: "Source Serif Pro", serif;
-}
-
-#clock-screen-button {
-  position: absolute;
-  left: 0;
-  top: 70%;
-}
-
-#clock-screen-button-home {
-  position: absolute;
-  right: 0;
-  top: 87%;
-}
-
-.clock-header {
-  position: absolute;
-  top: 15%;
-}
-
-#camera-screen-body {
-  color: white;
-}
 
 .start-screen-information {
   position: absolute;
 }
 
-.camera-screen-body {
-  position: absolute;
-  top: 7%;
-  left: 25%;
-  font-family: "Source Serif Pro", serif;
-  text-align: center;
-}
-
-#camera-screen-welcome {
-  font-size: 45px;
-}
-
-#camera-screen-welcome-text {
-  line-height: 100%;
-}
-
-#camera-screen-date{
-  text-align: center;
-  font-size: 22px;
-}
 
 .worker-search{
   position: relative;
@@ -132,4 +73,173 @@
 
 .css-b8ldur-Input {
   color: white !important;
+}
+.profileimage {
+  width: 6rem;
+  height: 6rem;
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 30px 30px 30px 30px;
+  margin-right: 1rem;
+}
+.foreman-name{
+  font-size: 1.5rem;
+}
+
+.logoKiosk{
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  height: 80px;
+  width: 150px;
+  text-indent: -9999px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.logoKiosk.default{
+  text-align: center;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background: #000;
+  color: #fff;
+  text-indent: 0px;
+}
+.kiosk-start{
+  text-indent: -9999px;
+}
+.kiosk-start.default{
+  font-weight: 700;
+  text-indent: 0px;
+  text-align: center;
+  line-height: 80px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+#camera-canvas{
+  width: auto;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: -1;
+  background-color: #d7d0c8;
+}
+#camera-screen{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .information-container-black-reverse{
+    top: auto;
+    bottom: 0;
+    height: 500px;
+    z-index: 1;
+  }
+  
+  .camera-screen-body {
+    font-family: "Source Serif Pro", serif;
+    text-align: center;
+  }
+
+  #camera-screen-welcome-text {
+    font-size: 3rem;
+  }
+
+  .time-section{
+    text-align: center;
+    font-size: 22px;
+  }
+  .face-image{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: #d7d0c8;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    z-index: -1;
+  }
+  .info-404{ 
+    text-align: center; 
+    position: absolute; 
+    bottom: 0; 
+    background: #fff; 
+    width: 100%; 
+    padding: 1em; 
+    font-size: 1.4rem; 
+    left: 0;
+  }
+}
+.user-list-option{
+  padding: 0.6em 0 ;
+  .user-image{
+    width: 3rem;
+    height: 3rem;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 30px 30px 30px 30px;
+    margin-right: 1rem;
+  }
+  .user-name{
+    font-size: 1.5rem;
+  }
+}
+#stream-container{
+  display: none;
+}
+#clock-screen{
+  position: absolute;
+  border-radius: 0px 25px 0px 0px;
+  width: 90%;
+  height: 90vh;
+  z-index: 1;
+  bottom: 0;
+  overflow: hidden;
+  padding: 1em 0;
+
+  .information-container-clock{
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .clock-header-value{
+    font-size: 2rem;
+  }
+  .user-image{
+    width: 5rem;
+    height: 5rem;
+    background-color: #333;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border-radius: 30px 30px 30px 30px;
+    margin-bottom: 1rem;
+
+  }
+  .user-name{
+    font-size: 1.5rem;
+  }
+  .button-wrapper{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -30%);
+
+  }
+  #clock-screen-button{
+    position: relative;
+    margin: 0 auto 3em auto;
+    transform: scale(1.3);
+  }
+  #clock-screen-button-home{
+    position: relative;
+    margin: 0 auto;
+  }
 }

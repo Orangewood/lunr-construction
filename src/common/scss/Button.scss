@@ -10,40 +10,54 @@
   box-shadow: none;
   position: absolute;
   white-space: nowrap;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding-top: 7px;
   cursor: pointer;
-
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
   &-blue {
-    background: url(../images/BlueButton.svg);
+    background-image: url(../images/BlueButton.svg);
   }
   &-green {
-    background: url(../images/GreenButton.svg);
+    background-image: url(../images/GreenButton.svg);
   }
   &-orange {
-    background: url(../images/OrangeButton.svg);
+    background-image: url(../images/OrangeButton.svg);
   }
   .button-text {
     color: white;
     width: auto;
     height: auto;
     font-family: "Source Serif Pro", serif;
-    position: absolute;
     font-size: x-large;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  }
+  &:hover{
+    text-decoration: none;
+    color: inherit;
+  }
+  &:focus {
+    .button-text {
+      opacity: 25%;
+    }
   }
 }
 
-custom-button:focus {
-  .button-text {
-    opacity: 25%;
+.custom-button-small{
+  width: 175px !important;
+  height: 45px !important;
+  background-size: 100% auto;
+  .button-text{
+    font-size: 1rem;
   }
 }
 
-#button-orange-small {
+#button-orange-small, .button-orange-small {
   width: 114.393px;
   height: 27.732px;
-  background: url(../images/OrangeButtonSmall.svg);
+  background-image: url(../images/OrangeButtonSmall.svg);
   border: none;
   color: transparent;
   outline: none;
@@ -55,7 +69,7 @@ custom-button:focus {
 #button-green-small {
   width: 114.393px;
   height: 27.732px;
-  background: url(../images/GreenButtonSmall.svg);
+  background-image: url(../images/GreenButtonSmall.svg);
   border: none;
   color: transparent;
   outline: none;

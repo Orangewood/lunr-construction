@@ -1,15 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './core/components/App';
-import * as serviceWorker from './serviceWorker';
+
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter } from 'react-router-dom'
+import "nprogress/nprogress.css";
+import './index.css';
+
+
+import App from './core/App';
+import * as serviceWorker from './serviceWorker';
+
+import { BrowserRouter } from 'react-router-dom';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
+import {store,persistor} from './redux/store';
 
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <App />
-  </BrowserRouter>,
+  
+  <Provider store={store}>
+    <BrowserRouter>
+      <PersistGate  persistor={persistor}>
+        <App />
+      </PersistGate>
+      </BrowserRouter>
+   </Provider>,
   document.getElementById('root')
 );
 

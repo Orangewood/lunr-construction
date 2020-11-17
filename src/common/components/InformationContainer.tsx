@@ -11,10 +11,12 @@ interface InformationContainerProps {
 export default function InformationContainer(
   props: InformationContainerProps
 ): JSX.Element {
-  const { white, kioskHome, clock } = props;
+  const { white, kioskHome, clock, wrapper } = props;
 
   if (white)
     return <div className='information-container'>{props.children}</div>;
+  if (wrapper)
+    return <div className='information-container-wrapper'>{props.children}</div>;
   if (kioskHome)
     return <div className='information-container-black'>{props.children}</div>;
   if (clock)

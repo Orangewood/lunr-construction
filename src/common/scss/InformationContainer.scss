@@ -5,13 +5,14 @@
   position: absolute;
   border-radius: 0px 100px 100px 0px;
   background: #fff;
-  width: 90vw;
+  width: 90%;
   height: 80vh;
   box-shadow: 5px 10px 8px 10px #888888;
   z-index: -1;
+  padding: 3rem 2rem;
   top: 10%;
   &-clock {
-    width: 80vw;
+    width: 90%;
     height: 70vh;
     left: 0;
     top: 25%;
@@ -19,24 +20,36 @@
   &-black {
     background: #000000;
     color: #fff;
-    transform: scale(-1, 1);
-    width: 70vw;
+    // transform: scale(-1, 1);
+    border-radius: 100px 0px 0px 100px;
+    width: 70%;
     height: 70vh;
     right: 0;
     top: 15%;
     overflow: hidden;
     box-shadow: none;
+    z-index: 10;
   }
   &-black-reverse {
     border-radius: 0px 100px 0px 0px;
     position: absolute;
     background: #000000;
     color: #fff;
-    width: 90vw;
+    width: 90%;
     height: 65vh;
     left: 0;
     top: 35%;
     overflow: hidden;
     box-shadow: none;
   }
+}
+
+.information-container-wrapper{
+  position: absolute;
+  width: 100%;
+  max-width: 500px;
+  left: 50%;
+  top: 50%;
+  padding: 20px;
+  transform: translate(-50%, -50%);
 }

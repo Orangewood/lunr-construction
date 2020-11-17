@@ -7,5 +7,6 @@ export enum AppList {
     foreman = 5,
     kioskHome = 6,
     cameraScreen = 7,
-    clockInAndOut = 8
+    clockInAndOut = 8,
+    changepin=9
   }
