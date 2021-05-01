@@ -10,7 +10,8 @@ import QuickBooks from "../../images/Quickbooks.svg";
 const  AdminQuickBooksAuth = (props): JSX.Element => {
     const history = useHistory();
     const checkAuth = async () => {
-        window.location.href = `${config.API_URL}${config.GET_OAUTH}`
+        // window.location.href = `${config.API_URL}${config.GET_OAUTH}`
+        history.push('/signin')
     }
 
     useEffect(()=>{
