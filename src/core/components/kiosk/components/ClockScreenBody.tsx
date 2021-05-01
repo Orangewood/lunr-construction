@@ -18,7 +18,7 @@ export default function ClockScreenBody(props: ClockScreenBodyProps) {
         <Col>
           <h2>{clockIn ? "Clock In" : "Clock Out"}</h2>
           <p>
-            {jobcode.label}
+            {'test'}
           </p>
           <p className="mb-1">
             {currentTime.toLocaleTimeString("en-US", {
