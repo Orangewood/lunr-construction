@@ -96,7 +96,7 @@ const App = (props) => {
             <PrivateRoute 
               key={`r-${index}`}
               path={r.path} 
-              isAuthenticated={props?.admin?.authenticated}
+              isAuthenticated={true}
               render={r.render}
             >
             </PrivateRoute>
