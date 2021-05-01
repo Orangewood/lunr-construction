@@ -50,7 +50,7 @@ const  AdminLogin = (props): JSX.Element => {
           className="form-control mb-5" 
           id='authorize-text' 
           name="checktoken" 
-          placeholder='Enter Pin' 
+          placeholder='Pin goes here...' 
           onChange={onChange}
         /> 
         <div className="d-flex justify-content-center mb-4">
